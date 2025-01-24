@@ -1,0 +1,19 @@
+{
+  "name": "@octagony/toolscss",
+  "version": "0.0.1",
+  "description": "Simple CSS library",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass index.scss dist/index.css --style=compressed"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "library"
+  ],
+  "author": "octagony",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.83.4"
+  }
+}
