@@ -1,10 +1,10 @@
 {
   "name": "@octagony/toolscss",
-  "version": "0.0.11",
+  "version": "0.0.13",
   "description": "Simple CSS library",
   "main": "index.js",
   "scripts": {
-    "build": "sass index.scss dist/index.css --style=compressed"
+    "build": "sass ./src/index.scss dist/index.css --style=compressed"
   },
   "keywords": [
     "scss",

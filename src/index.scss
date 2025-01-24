@@ -1,25 +1,5 @@
-@import "./variables";
-@import "./functions";
-@import "./mixins";
-@import "./spacing";
-
-$colors: (
-  "black": rgb(33, 33, 33),
-  "black-75": rgba(33, 33, 33, 0.75),
-  "black-50": rgba(33, 33, 33, 0.5),
-  "black-25": rgba(33, 33, 33, 0.25),
-  "white": rgb(247, 247, 247),
-  "white-75": rgba(247, 247, 247, 0.75),
-  "white-50": rgba(247, 247, 247, 0.5),
-  "white-25": rgba(247, 247, 247, 0.25),
-);
-
-@each $key, $value in $colors {
-  .color-#{$key} {
-    color: $value;
-  }
-
-  .background-#{$key} {
-    background-color: $value;
-  }
-}
+@use "variables";
+@use "functions";
+@use "mixins";
+@use "spacing";
+@use "fonts";

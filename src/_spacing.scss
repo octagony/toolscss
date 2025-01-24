@@ -1,34 +1,84 @@
-@import "functions";
+@use "functions";
 
 $spacing: (
-  "2": rem-calc(2),
-  "4": rem-calc(4),
-  "6": rem-calc(6),
-  "8": rem-calc(8),
-  "10": rem-calc(10),
-  "12": rem-calc(12),
-  "14": rem-calc(14),
-  "16": rem-calc(16),
-  "18": rem-calc(18),
-  "20": rem-calc(20),
-  "22": rem-calc(22),
-  "24": rem-calc(24),
-  "26": rem-calc(26),
-  "28": rem-calc(28),
-  "30": rem-calc(30),
-  "32": rem-calc(32),
-  "34": rem-calc(34),
-  "36": rem-calc(36),
-  "38": rem-calc(38),
-  "40": rem-calc(40),
+  "2": functions.rem-calc(2),
+  "4": functions.rem-calc(4),
+  "6": functions.rem-calc(6),
+  "8": functions.rem-calc(8),
+  "10": functions.rem-calc(10),
+  "12": functions.rem-calc(12),
+  "14": functions.rem-calc(14),
+  "16": functions.rem-calc(16),
+  "18": functions.rem-calc(18),
+  "20": functions.rem-calc(20),
+  "22": functions.rem-calc(22),
+  "24": functions.rem-calc(24),
+  "26": functions.rem-calc(26),
+  "28": functions.rem-calc(28),
+  "30": functions.rem-calc(30),
+  "32": functions.rem-calc(32),
+  "34": functions.rem-calc(34),
+  "36": functions.rem-calc(36),
+  "38": functions.rem-calc(38),
+  "40": functions.rem-calc(40),
 );
 
 @each $key, $value in $spacing {
+  //MARGIN VALUES
   .m-#{$key} {
     margin: $value;
   }
 
+  .mx-#{$key} {
+    margin-inline: $value;
+  }
+
+  .my-#{$key} {
+    margin-block: $value;
+  }
+
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+
+  //PADDING VALUES
   .p-#{$key} {
     padding: $value;
+  }
+
+  .px-#{$key} {
+    padding-inline: $value;
+  }
+
+  .py-#{$key} {
+    padding-block: $value;
+  }
+
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  .pr-#{$key} {
+    padding-right: $value;
   }
 }

@@ -1,0 +1,20 @@
+$values: (
+  "block",
+  "inline",
+  "inline-block",
+  "flex",
+  "inline-flex",
+  "grid",
+  "inline-grid",
+  "flow-root",
+  "none",
+  "contents",
+  "table-row",
+  "list-item"
+);
+
+@each $key, $value in $values {
+  .d-#{$key} {
+    display: $value;
+  }
+}
