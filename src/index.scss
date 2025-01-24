@@ -1,20 +1,7 @@
-$spacing: (
-  'xs': 0.25rem,
-  'sm': 0.5rem,
-  'md': 1rem,
-  'lg': 2rem,
-  'xl': 4rem,
-);
-
-@each $key, $value in $spacing {
-  .m-#{$key} {
-    margin: $value;
-  }
-
-  .p-#{$key} {
-    padding: $value;
-  }
-}
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+@import "./spacing";
 
 $colors: (
   "black": rgb(33, 33, 33),

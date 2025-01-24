@@ -1,0 +1,34 @@
+@import "functions";
+
+$spacing: (
+  "2": rem-calc(2),
+  "4": rem-calc(4),
+  "6": rem-calc(6),
+  "8": rem-calc(8),
+  "10": rem-calc(10),
+  "12": rem-calc(12),
+  "14": rem-calc(14),
+  "16": rem-calc(16),
+  "18": rem-calc(18),
+  "20": rem-calc(20),
+  "22": rem-calc(22),
+  "24": rem-calc(24),
+  "26": rem-calc(26),
+  "28": rem-calc(28),
+  "30": rem-calc(30),
+  "32": rem-calc(32),
+  "34": rem-calc(34),
+  "36": rem-calc(36),
+  "38": rem-calc(38),
+  "40": rem-calc(40),
+);
+
+@each $key, $value in $spacing {
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  .p-#{$key} {
+    padding: $value;
+  }
+}
