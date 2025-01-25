@@ -1,6 +1,6 @@
 {
 	"name": "@octagony/toolscss",
-	"version": "0.0.147",
+	"version": "0.0.148",
 	"description": "Simple CSS library",
 	"type": "module",
 	"scripts": {
