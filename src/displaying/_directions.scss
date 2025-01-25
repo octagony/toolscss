@@ -1,3 +1,5 @@
+@use '../functions';
+
 $directions: (
 	row: row,
 	row-reverse: row-reverse,
@@ -22,7 +24,7 @@ $wrap: (wrap, wrap-reverse, nowrap);
 
 // FLEX GAP
 @mixin gap($size) {
-	gap: $size;
+	gap: functions.rem-calc($size);
 }
 
 @for $gap from 0 through 9999 {
