@@ -1,5 +1,9 @@
-@use "variables";
-@use "functions";
-@use "mixins";
-@use "spacing";
-@use "fonts";
+@use 'variables';
+@use 'functions';
+@use 'mixins';
+@use 'spacing';
+@use 'fonts';
+
+//DISPLAYING
+@use 'displaying/core';
+@use 'displaying/directions';
