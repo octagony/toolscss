@@ -5,11 +5,11 @@ $position-value: (start, end);
 
 @each $value in $base-values {
 	.grid-cols-#{$value} {
-		grid-template-columns: $value;
+		grid-template-columns: repeat($value, minmax(0, 1fr));
 	}
 
 	.grid-rows-#{$value} {
-		grid-template-rows: $value;
+		grid-template-rows: repeat($value, minmax(0, 1fr));
 	}
 }
 
