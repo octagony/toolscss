@@ -2,9 +2,9 @@
 	"name": "@octagony/toolscss",
 	"version": "0.0.143",
 	"description": "Simple CSS library",
-	"main": "index.js",
+	"type": "module",
 	"scripts": {
-		"build": "sass ./src/index.scss dist/index.css --style=compressed"
+		"build": "vite build"
 	},
 	"keywords": [
 		"scss",
@@ -13,7 +13,10 @@
 	],
 	"author": "octagony",
 	"license": "ISC",
-	"dependencies": {
-		"sass": "^1.83.4"
+	"devDependencies": {
+		"cssnano": "^7.0.6",
+		"postcss": "^8.5.1",
+		"saas": "^1.0.0",
+		"vite": "^6.0.11"
 	}
 }
