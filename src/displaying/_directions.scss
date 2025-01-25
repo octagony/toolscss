@@ -1,8 +1,8 @@
 $directions: (
-	'row': 'row',
-	'row-reverse': 'row-reverse',
-	'col': 'column',
-	'col-reverse': 'column-reverse',
+	row: row,
+	row-reverse: row-reverse,
+	col: column,
+	col-reverse: column-reverse,
 );
 
 @each $key, $value in $directions {
@@ -12,7 +12,7 @@ $directions: (
 }
 
 //WRAPPING
-$wrap: ('wrap', 'wrap-reverse', 'nowrap');
+$wrap: (wrap, wrap-reverse, nowrap);
 
 @each $key, $value in $wrap {
 	.flex-#{$key} {
@@ -34,15 +34,15 @@ $wrap: ('wrap', 'wrap-reverse', 'nowrap');
 // JUSTIFY VALUES
 // // CONTENT
 $content-values: (
-	'start': 'flex-start',
-	'end': 'flex-end',
-	'center': 'center',
-	'between': 'space-between',
-	'around': 'space-around',
-	'evenly': 'space-evenly',
-	'stretch': 'stretch',
-	'baseline': 'baseline',
-	'normal': 'normal',
+	start: flex-start,
+	end: flex-end,
+	center: center,
+	between: space-between,
+	around: space-around,
+	evenly: space-evenly,
+	stretch: stretch,
+	baseline: baseline,
+	normal: normal,
 );
 
 @each $key, $value in $content-values {
@@ -52,7 +52,7 @@ $content-values: (
 }
 
 // // ITEMS
-$justify-items: ('start', 'end', 'center', 'stretch', 'normal');
+$justify-items: (start, end, center, stretch, normal);
 
 @each $value in $justify-items {
 	.justify-items-#{$value} {
@@ -61,7 +61,7 @@ $justify-items: ('start', 'end', 'center', 'stretch', 'normal');
 }
 
 // // SELF
-$justify-self: ('auto', 'start', 'end', 'center', 'stretch');
+$justify-self: (auto, start, end, center, stretch);
 
 @each $value in $justify-self {
 	.justify-self-#{$value} {
@@ -79,12 +79,12 @@ $justify-self: ('auto', 'start', 'end', 'center', 'stretch');
 
 // // SELF
 $self-values: (
-	'auto': 'auto',
-	'start': 'flex-start',
-	'end': 'end-start',
-	'center': 'center',
-	'stretch': 'stretch',
-	'baseline': 'baseline',
+	auto: auto,
+	start: flex-start,
+	end: end-start,
+	center: center,
+	stretch: stretch,
+	baseline: baseline,
 );
 
 @each $key, $value in $self-values {
@@ -96,14 +96,14 @@ $self-values: (
 // PLACE VALUES
 // // CONTENT
 $place-content-values: (
-	'start': 'start',
-	'end': 'end',
-	'center': 'center',
-	'between': 'space-between',
-	'around': 'space-around',
-	'evenly': 'space-evenly',
-	'stretch': 'stretch',
-	'baseline': 'baseline',
+	start: start,
+	end: end,
+	center: center,
+	between: space-between,
+	around: space-around,
+	evenly: space-evenly,
+	stretch: stretch,
+	baseline: baseline,
 );
 
 @each $key, $value in $place-content-values {
@@ -113,7 +113,7 @@ $place-content-values: (
 }
 
 // // ITEMS
-$place-items-values: ('start', 'end', 'center', 'stretch', 'baseline');
+$place-items-values: (start, end, center, stretch, baseline);
 
 @each $value in $place-items-values {
 	.place-items-#{$value} {
@@ -122,7 +122,7 @@ $place-items-values: ('start', 'end', 'center', 'stretch', 'baseline');
 }
 
 // // SELF
-$place-self-values: ('auto', 'start', 'end', 'center', 'stretch');
+$place-self-values: (auto, start, end, center, stretch);
 
 @each $value in $place-self-values {
 	.place-self-#{$value} {
