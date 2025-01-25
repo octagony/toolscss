@@ -116,7 +116,7 @@ $place-content-values: (
 $place-items-values: ('start', 'end', 'center', 'stretch', 'baseline');
 
 @each $value in $place-items-values {
-	.place-items-#{$key} {
+	.place-items-#{$value} {
 		place-items: $value;
 	}
 }
@@ -125,7 +125,7 @@ $place-items-values: ('start', 'end', 'center', 'stretch', 'baseline');
 $place-self-values: ('auto', 'start', 'end', 'center', 'stretch');
 
 @each $value in $place-self-values {
-	.place-self-#{$key} {
+	.place-self-#{$value} {
 		place-self: $value;
 	}
 }
