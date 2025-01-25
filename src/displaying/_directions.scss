@@ -16,8 +16,8 @@ $directions: (
 //WRAPPING
 $wrap: (wrap, wrap-reverse, nowrap);
 
-@each $key, $value in $wrap {
-	.flex-#{$key} {
+@each $value in $wrap {
+	.flex-#{$value} {
 		flex-wrap: $value;
 	}
 }

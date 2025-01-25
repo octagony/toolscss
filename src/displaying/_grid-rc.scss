@@ -1,0 +1,85 @@
+$base-values: (none, subgrid);
+$count-values: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+$auto-value: auto;
+$position-value: (start, end);
+
+@each $value in $base-values {
+	.grid-cols-#{$value} {
+		grid-template-columns: $value;
+	}
+
+	.grid-rows-#{$value} {
+		grid-template-rows: $value;
+	}
+}
+
+@each $value in $count-values {
+	.grid-cols-#{$value} {
+		grid-template-columns: $value;
+	}
+
+	.grid-rows-#{$value} {
+		grid-template-rows: $value;
+	}
+}
+
+// AUTO VALUES
+@each $value in $position-value {
+	.col-#{$value}-#{$auto-value} {
+		grid-column-#{$value}: $auto-value;
+	}
+
+	.col-#{$value}-#{$auto-value} {
+		grid-row-#{$value}: $auto-value;
+	}
+}
+
+@mixin col-span($number) {
+	grid-column: span $number / span $number;
+}
+
+@mixin col-start($number) {
+	grid-column-start: $number;
+}
+
+@mixin col-end($number) {
+	grid-column-end: $number;
+}
+
+@mixin row-span($number) {
+	grid-row: span $number / span $number;
+}
+
+@mixin row-start($number) {
+	grid-row-start: $number;
+}
+
+@mixin row-end($number) {
+	grid-row-end: $number;
+}
+
+@for $span from 0 through 99 {
+	.col-span-#{$span} {
+		@include col-span($span);
+	}
+
+	.col-start-#{$span} {
+		@include col-start($span);
+	}
+
+	.col-end-#{$span} {
+		@include col-end($span);
+	}
+
+	.row-span-#{$span} {
+		@include row-span($span);
+	}
+
+	.row-start-#{$span} {
+		@include row-start($span);
+	}
+
+	.row-end-#{$span} {
+		@include row-end($span);
+	}
+}
