@@ -1,0 +1,7 @@
+$placing-values: ('static', 'fixed', 'absolute', 'relative', 'sticky');
+
+@each $value in $placing-values {
+	.#{$value} {
+		position: $value;
+	}
+}

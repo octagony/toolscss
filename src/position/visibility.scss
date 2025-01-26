@@ -1,0 +1,7 @@
+$visibility-values: ('visible', 'hidden', 'collapse');
+
+@each $value in $visibility-values {
+	.#{$value} {
+		visibility: $value;
+	}
+}
