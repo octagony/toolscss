@@ -1,0 +1,7 @@
+$box-decoration-values: (clone, slice);
+
+@each $value in $box-decoration-values {
+  .box-decoration-#{$value} {
+    box-direction: $value;
+  }
+}

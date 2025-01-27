@@ -1,0 +1,15 @@
+@use "@/_utils" as utils;
+
+$overflow-values: ("auto", "visible", "hidden", "scroll", "clip");
+
+@each $value in $overflow-values {
+  .overflow-#{$value} {
+    overflow: $value;
+  }
+
+  @each $coordinate in utils.$coordinates-values {
+    .overflow-#{$coordinate}-#{$value} {
+      overflow-#{$coordinate}: $value;
+    }
+  }
+}

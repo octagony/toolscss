@@ -1,0 +1,17 @@
+.z-none {
+  z-index: 0;
+}
+
+.z-max {
+  z-index: 99;
+}
+
+.z-auto {
+  z-index: auto;
+}
+
+@for $index from 0 through 50 {
+  .z-#{$index} {
+    z-index: $index;
+  }
+}

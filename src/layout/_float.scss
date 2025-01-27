@@ -1,0 +1,13 @@
+$float-values: (
+  right: right,
+  left: left,
+  start: inline-start,
+  end: inline-end,
+  none: none,
+);
+
+@each $key, $value in $float-values {
+  .float-#{$key} {
+    float: $value;
+  }
+}

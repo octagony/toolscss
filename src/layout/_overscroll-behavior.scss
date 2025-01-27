@@ -1,0 +1,15 @@
+@use "@/_utils" as utils;
+
+$overscroll-behavior-values: (auto, contain, none);
+
+@each $value in $overscroll-behavior-values {
+  .overscroll-#{$value} {
+    overscroll-behavior: $value;
+  }
+
+  @each $coordinate in utils.$coordinates-values {
+    .overscroll-#{$coordinate}-#{$value} {
+      overscroll-behavior-#{$coordinate}: $value;
+    }
+  }
+}

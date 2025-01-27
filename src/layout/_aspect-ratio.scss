@@ -1,0 +1,11 @@
+$aspect-values: (
+  square: "1/1",
+  video: "16/9",
+  auto: auto,
+);
+
+@each $key, $value in $aspect-values {
+  .aspect-#{$key} {
+    overflow: $value;
+  }
+}

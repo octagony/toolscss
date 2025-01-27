@@ -1,0 +1,14 @@
+$clear-values: (
+  left: left,
+  right: right,
+  both: both,
+  start: inline-start,
+  end: inline-end,
+  none: none,
+);
+
+@each $key, $value in $clear-values {
+  .clear-#{$key} {
+    clear: $value;
+  }
+}

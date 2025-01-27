@@ -1,133 +1,133 @@
-@use '@/functions';
+@use "@/functions";
 
 $directions: (
-	row: row,
-	row-reverse: row-reverse,
-	col: column,
-	col-reverse: column-reverse,
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse,
 );
 
 @each $key, $value in $directions {
-	.flex-#{$key} {
-		flex-direction: $value;
-	}
+  .flex-#{$key} {
+    flex-direction: $value;
+  }
 }
 
 //WRAPPING
 $wrap: (wrap, wrap-reverse, nowrap);
 
 @each $value in $wrap {
-	.flex-#{$value} {
-		flex-wrap: $value;
-	}
+  .flex-#{$value} {
+    flex-wrap: $value;
+  }
 }
 
 // FLEX GAP
 @mixin gap($size) {
-	gap: functions.rem-calc($size);
+  gap: functions.rem-calc($size);
 }
 
-@for $gap from 0 through 9999 {
-	.gap-#{$gap} {
-		@include gap($gap);
-	}
+@for $gap from 0 through 100 {
+  .gap-#{$gap} {
+    @include gap($gap);
+  }
 }
 
 // JUSTIFY VALUES
 // // CONTENT
 $content-values: (
-	start: flex-start,
-	end: flex-end,
-	center: center,
-	between: space-between,
-	around: space-around,
-	evenly: space-evenly,
-	stretch: stretch,
-	baseline: baseline,
-	normal: normal,
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch,
+  baseline: baseline,
+  normal: normal,
 );
 
 @each $key, $value in $content-values {
-	.justify-#{$key} {
-		justify-content: $value;
-	}
+  .justify-#{$key} {
+    justify-content: $value;
+  }
 }
 
 // // ITEMS
 $justify-items: (start, end, center, stretch, normal);
 
 @each $value in $justify-items {
-	.justify-items-#{$value} {
-		justify-items: $value;
-	}
+  .justify-items-#{$value} {
+    justify-items: $value;
+  }
 }
 
 // // SELF
 $justify-self: (auto, start, end, center, stretch);
 
 @each $value in $justify-self {
-	.justify-self-#{$value} {
-		justify-self: $value;
-	}
+  .justify-self-#{$value} {
+    justify-self: $value;
+  }
 }
 
 // ALIGN VALUES
 // // CONTENT
 @each $key, $value in $content-values {
-	.content-#{$key} {
-		align-content: $value;
-	}
+  .content-#{$key} {
+    align-content: $value;
+  }
 }
 
 // // SELF
 $self-values: (
-	auto: auto,
-	start: flex-start,
-	end: end-start,
-	center: center,
-	stretch: stretch,
-	baseline: baseline,
+  auto: auto,
+  start: flex-start,
+  end: end-start,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
 );
 
 @each $key, $value in $self-values {
-	.self-#{$key} {
-		align-self: $value;
-	}
+  .self-#{$key} {
+    align-self: $value;
+  }
 }
 
 // PLACE VALUES
 // // CONTENT
 $place-content-values: (
-	start: start,
-	end: end,
-	center: center,
-	between: space-between,
-	around: space-around,
-	evenly: space-evenly,
-	stretch: stretch,
-	baseline: baseline,
+  start: start,
+  end: end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch,
+  baseline: baseline,
 );
 
 @each $key, $value in $place-content-values {
-	.place-content-#{$key} {
-		place-content: $value;
-	}
+  .place-content-#{$key} {
+    place-content: $value;
+  }
 }
 
 // // ITEMS
 $place-items-values: (start, end, center, stretch, baseline);
 
 @each $value in $place-items-values {
-	.place-items-#{$value} {
-		place-items: $value;
-	}
+  .place-items-#{$value} {
+    place-items: $value;
+  }
 }
 
 // // SELF
 $place-self-values: (auto, start, end, center, stretch);
 
 @each $value in $place-self-values {
-	.place-self-#{$value} {
-		place-self: $value;
-	}
+  .place-self-#{$value} {
+    place-self: $value;
+  }
 }

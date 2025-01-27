@@ -1,0 +1,10 @@
+$isolations-values: (
+  "isolate": isolate,
+  "isolation-auto": auto,
+);
+
+@each $key, $value in $isolations-values {
+  .#{$key} {
+    isolation: #{$value};
+  }
+}

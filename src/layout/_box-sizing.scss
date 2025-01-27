@@ -1,0 +1,10 @@
+$box-sizing-values: (
+  border: border-box,
+  content: content-box,
+);
+
+@each $key, $value in $box-sizing-values {
+  .box-#{$key} {
+    box-sizing: $value;
+  }
+}
