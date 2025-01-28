@@ -1,0 +1,21 @@
+$order-values: (
+  first: -infinity,
+  last: infinity,
+  none: 0,
+);
+
+@each $key, $value in $order-values {
+  .order-#{$key} {
+    order: $value;
+  }
+}
+
+@for $num from 1 through 10 {
+  .order-#{$num} {
+    order: $num;
+  }
+
+  .-order-#{$num} {
+    order: calc($num * -1);
+  }
+}

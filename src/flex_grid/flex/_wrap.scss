@@ -1,0 +1,7 @@
+$wrap: (wrap, wrap-reverse, nowrap);
+
+@each $value in $wrap {
+  .flex-#{$value} {
+    flex-wrap: $value;
+  }
+}

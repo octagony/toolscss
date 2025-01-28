@@ -1,0 +1,17 @@
+.grow {
+  flex-grow: 1;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+@for $num from 2 through 10 {
+  .grow-#{$num} {
+    flex-grow: $num;
+  }
+
+  .shrink-#{$num} {
+    flex-shrink: $num;
+  }
+}

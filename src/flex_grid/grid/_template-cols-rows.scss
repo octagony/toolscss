@@ -1,0 +1,24 @@
+$base-values: (none, subgrid);
+$count-values: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+// COUNT FROM 1-12
+@each $value in $count-values {
+  .grid-cols-#{$value} {
+    grid-template-columns: repeat($value, minmax(0, 1fr));
+  }
+
+  .grid-rows-#{$value} {
+    grid-template-rows: repeat($value, minmax(0, 1fr));
+  }
+}
+
+// BASE VALUES
+@each $value in $base-values {
+  .grid-cols-#{$value} {
+    grid-template-columns: $value;
+  }
+
+  .grid-rows-#{$value} {
+    grid-template-rows: $value;
+  }
+}

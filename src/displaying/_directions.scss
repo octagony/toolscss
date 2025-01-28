@@ -1,27 +1,5 @@
 @use "@/functions";
 
-$directions: (
-  row: row,
-  row-reverse: row-reverse,
-  col: column,
-  col-reverse: column-reverse,
-);
-
-@each $key, $value in $directions {
-  .flex-#{$key} {
-    flex-direction: $value;
-  }
-}
-
-//WRAPPING
-$wrap: (wrap, wrap-reverse, nowrap);
-
-@each $value in $wrap {
-  .flex-#{$value} {
-    flex-wrap: $value;
-  }
-}
-
 // FLEX GAP
 @mixin gap($size) {
   gap: functions.rem-calc($size);

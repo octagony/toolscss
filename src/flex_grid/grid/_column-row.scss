@@ -1,0 +1,64 @@
+$position-value: (start, end);
+$auto-value: auto;
+
+// AUTO VALUES
+@each $value in $position-value {
+  .col-#{$value}-#{$auto-value} {
+    grid-column-#{$value}: $auto-value;
+  }
+
+  .col-#{$value}-#{$auto-value} {
+    grid-row-#{$value}: $auto-value;
+  }
+}
+
+// SPAN VALUES
+@mixin col-span($number) {
+  grid-column: span $number / span $number;
+}
+
+@mixin col-start($number) {
+  grid-column-start: $number;
+}
+
+@mixin col-end($number) {
+  grid-column-end: $number;
+}
+
+@mixin row-span($number) {
+  grid-row: span $number / span $number;
+}
+
+@mixin row-start($number) {
+  grid-row-start: $number;
+}
+
+@mixin row-end($number) {
+  grid-row-end: $number;
+}
+
+@for $span from 0 through 99 {
+  .col-span-#{$span} {
+    @include col-span($span);
+  }
+
+  .col-start-#{$span} {
+    @include col-start($span);
+  }
+
+  .col-end-#{$span} {
+    @include col-end($span);
+  }
+
+  .row-span-#{$span} {
+    @include row-span($span);
+  }
+
+  .row-start-#{$span} {
+    @include row-start($span);
+  }
+
+  .row-end-#{$span} {
+    @include row-end($span);
+  }
+}

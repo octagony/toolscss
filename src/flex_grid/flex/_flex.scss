@@ -1,0 +1,17 @@
+$flex-values: (
+  auto: "1 1 auto",
+  initial: "0 1 auto",
+  none: none,
+);
+
+@each $key, $value in $flex-values {
+  .flex-#{$key} {
+    flex: $value;
+  }
+}
+
+@for $num from 1 through 10 {
+  .flex-#{$num} {
+    flex: $num;
+  }
+}
