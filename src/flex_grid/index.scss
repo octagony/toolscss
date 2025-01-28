@@ -1,5 +1,13 @@
 //GENERAL
 @use "order";
+@use "gaps";
+@use "justify-content";
+@use "justify-items";
+@use "align-items";
+@use "align-self";
+@use "place-content";
+@use "place-items";
+@use "place-self";
 
 //FLEX
 @use "flex";

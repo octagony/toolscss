@@ -1,0 +1,7 @@
+$place-items-values: (start, end, center, stretch, baseline);
+
+@each $value in $place-items-values {
+  .place-items-#{$value} {
+    place-items: $value;
+  }
+}

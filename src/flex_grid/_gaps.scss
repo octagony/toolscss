@@ -1,0 +1,15 @@
+@use "@/functions";
+
+@for $gap from 0 through 100 {
+  .gap-#{$gap} {
+    gap: functions.rem-calc($gap);
+  }
+
+  .gap-x-#{$gap} {
+    column-gap: functions.rem-calc($gap);
+  }
+
+  .gap-y-#{$gap} {
+    row-gap: functions.rem-calc($gap);
+  }
+}

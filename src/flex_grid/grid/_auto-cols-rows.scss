@@ -1,0 +1,16 @@
+$auto-cols-rows-values: (
+  auto: auto,
+  min: min-content,
+  max: max-content,
+  fr: minmax(0, 1fr),
+);
+
+@each $key, $value in $auto-cols-rows-values {
+  .auto-cols-#{$key} {
+    grid-auto-columns: $value;
+  }
+
+  .auto-rows-#{$key} {
+    grid-auto-columns: $value;
+  }
+}

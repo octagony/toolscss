@@ -1,0 +1,7 @@
+$justify-self: (auto, start, end, center, stretch);
+
+@each $value in $justify-self {
+  .justify-self-#{$value} {
+    justify-self: $value;
+  }
+}

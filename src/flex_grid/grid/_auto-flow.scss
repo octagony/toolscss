@@ -1,0 +1,13 @@
+$auto-flow-values: (
+  row: row,
+  col: column,
+  dense: dense,
+  row-dense: row dense,
+  col-dense: column dense,
+);
+
+@each $key, $value in $auto-flow-values {
+  .grid-flow-#{$key} {
+    grid-auto-flow: $value;
+  }
+}

@@ -1,0 +1,7 @@
+$place-self-values: (auto, start, end, center, stretch);
+
+@each $value in $place-self-values {
+  .place-self-#{$value} {
+    place-self: $value;
+  }
+}

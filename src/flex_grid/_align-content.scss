@@ -1,0 +1,7 @@
+@use "@/_utils" as utils;
+
+@each $key, $value in utils.$flex-content-values {
+  .content-#{$key} {
+    align-content: $value;
+  }
+}

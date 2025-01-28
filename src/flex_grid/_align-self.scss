@@ -1,0 +1,14 @@
+$self-values: (
+  auto: auto,
+  start: flex-start,
+  end: end-start,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+@each $key, $value in $self-values {
+  .self-#{$key} {
+    align-self: $value;
+  }
+}

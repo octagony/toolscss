@@ -1,0 +1,16 @@
+$place-content-values: (
+  start: start,
+  end: end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+@each $key, $value in $place-content-values {
+  .place-content-#{$key} {
+    place-content: $value;
+  }
+}
