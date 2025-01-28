@@ -1,0 +1,58 @@
+@use "@/_utils" as utils;
+@use "@/functions" as functions;
+
+$inset-variables: (
+  px: functions.rem-calc(1),
+  full: 100%,
+  auto: auto,
+);
+
+$positions-value: (top, right, left, bottom);
+
+@each $key, $value in $inset-variables {
+  .inset-#{$key} {
+    inset: $value;
+  }
+
+  @if $key != auto {
+    .-inset-#{$key} {
+      inset: -$value;
+    }
+  }
+}
+
+@each $value in $positions-value {
+  @for $num from 0 through 100 {
+    .#{$value}-#{$num} {
+      #{$value}: functions.rem-calc($num);
+    }
+
+    .-#{$value}-#{$num} {
+      #{$value}: functions.rem-calc(-$num);
+    }
+
+    .#{$value}-#{$num}p {
+      #{$value}: $num + "%";
+    }
+
+    .-#{$value}-#{$num}p {
+      #{$value}: -$num + "%";
+    }
+
+    .inset-#{$num} {
+      inset: $num;
+    }
+
+    .-inset-#{$num} {
+      inset: -$num;
+    }
+
+    .inset-#{$num}p {
+      inset: $num + "%";
+    }
+
+    .-inset-#{$num}p {
+      inset: -$num + "%";
+    }
+  }
+}
