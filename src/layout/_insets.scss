@@ -40,11 +40,11 @@ $positions-value: (top, right, left, bottom);
     }
 
     .inset-#{$num} {
-      inset: $num;
+      inset: functions.rem-calc($num);
     }
 
     .-inset-#{$num} {
-      inset: -$num;
+      inset: functions.rem-calc(-$num);
     }
 
     .inset-#{$num}p {

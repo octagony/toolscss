@@ -1,0 +1,17 @@
+@use "@/functions" as functions;
+
+$container-values: (
+  3xs: var(--container-3xs, functions.rem-calc(256)),
+  2xs: var(--container-2xs, functions.rem-calc(288)),
+  xs: var(--container-xs, functions.rem-calc(320)),
+  sm: var(--container-sm, functions.rem-calc(384)),
+  md: var(--container-md, functions.rem-calc(448)),
+  lg: var(--container-lg, functions.rem-calc(512)),
+  xl: var(--container-xl, functions.rem-calc(576)),
+  2xl: var(--container-2xl, functions.rem-calc(672)),
+  3xl: var(--container-3xl, functions.rem-calc(768)),
+  4xl: var(--container-4xl, functions.rem-calc(896)),
+  5xl: var(--container-5xl, functions.rem-calc(1024)),
+  6xl: var(--container-6xl, functions.rem-calc(1152)),
+  7xl: var(--container-6xl, functions.rem-calc(1280)),
+);

@@ -1,0 +1,18 @@
+@use "@/_utils" as utils;
+
+$flex-basis-values: (
+  full: 100%,
+  auto: auto,
+);
+
+@each $key, $value in $flex-basis-values {
+  .basis-#{$key} {
+    flex-basis: $value;
+  }
+}
+
+@each $key, $value in utils.$container-values {
+  .basis-#{$key} {
+    flex-basis: $value;
+  }
+}
