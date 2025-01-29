@@ -1,22 +1,22 @@
 {
-	"name": "@octagony/toolscss",
-	"version": "0.0.149",
-	"description": "Simple CSS library",
-	"type": "module",
-	"scripts": {
-		"build": "vite build"
-	},
-	"keywords": [
-		"scss",
-		"css",
-		"library"
-	],
-	"author": "octagony",
-	"license": "ISC",
-	"devDependencies": {
-		"cssnano": "^7.0.6",
-		"postcss": "^8.5.1",
-		"saas": "^1.0.0",
-		"vite": "^6.0.11"
-	}
+  "name": "@octagony/toolscss",
+  "version": "0.0.150",
+  "description": "Simple CSS library",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "library"
+  ],
+  "author": "octagony",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.1",
+    "saas": "^1.0.0",
+    "vite": "^6.0.11"
+  }
 }
