@@ -1,4 +1,4 @@
-@mixin clampText($line-clamp) {
+@mixin clamp-text($line-clamp) {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
