@@ -6,7 +6,6 @@ $inset-variables: (
   full: 100%,
   auto: auto,
 );
-
 $positions-value: (top, right, left, bottom);
 
 @each $key, $value in $inset-variables {
@@ -31,11 +30,11 @@ $positions-value: (top, right, left, bottom);
       #{$value}: functions.rem-calc(-$num);
     }
 
-    .#{$value}-#{$num}p {
+    .#{$value}-#{$num} p {
       #{$value}: $num + "%";
     }
 
-    .-#{$value}-#{$num}p {
+    .-#{$value}-#{$num} p {
       #{$value}: -$num + "%";
     }
 
@@ -47,11 +46,11 @@ $positions-value: (top, right, left, bottom);
       inset: functions.rem-calc(-$num);
     }
 
-    .inset-#{$num}p {
+    .inset-#{$num} p {
       inset: $num + "%";
     }
 
-    .-inset-#{$num}p {
+    .-inset-#{$num} p {
       inset: -$num + "%";
     }
   }

@@ -24,7 +24,7 @@ $spacing: (
 );
 
 @each $key, $value in $spacing {
-  //MARGIN VALUES
+  // MARGIN VALUES
   .m-#{$key} {
     margin: $value;
   }
@@ -53,7 +53,7 @@ $spacing: (
     margin-right: $value;
   }
 
-  //PADDING VALUES
+  // PADDING VALUES
   .p-#{$key} {
     padding: $value;
   }
