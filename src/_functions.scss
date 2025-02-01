@@ -2,7 +2,7 @@
 @use "sass:math";
 @use "variables";
 
-//CONVERT TO REM
+// CONVERT TO REM
 @function strip-unit($num) {
   @return calc($num / calc($num * 0 + 1));
 }
@@ -10,7 +10,7 @@
 @function convert-to-rem($value, $base-value: variables.$rem-base) {
   $value: calc(strip-unit($value) / strip-unit($base-value)) * 1rem;
 
-  @if ($value ==0rem) {
+  @if $value == 0 {
     $value: 0;
   }
 
@@ -20,26 +20,26 @@
 @function rem-calc($values, $base-value: variables.$rem-base) {
   $max: list.length($values);
 
-  @if $max ==1 {
+  @if $max == 1 {
     @return convert-to-rem(list.nth($values, 1), $base-value);
   }
 
-  $remValues: ();
+  $rem-values: ();
 
   @for $i from 1 through $max {
-    $remValues: list.append(
-      $remValues,
+    $rem-values: list.append(
+      $rem-values,
       convert-to-rem(list.nth($values, $i), $base-value)
     );
   }
 
-  @return $remValues;
+  @return $rem-values;
 }
 
-//RANDOM NUMBERS
-@function randomNum($min, $max) {
+// RANDOM NUMBERS
+@function random-num($min, $max) {
   $rand: math.random();
-  $randomNum: $min + math.floor($rand * (($max - $min) + 1));
+  $random-num: $min + math.floor($rand * (($max - $min) + 1));
 
-  @return $randomNum;
+  @return $random-num;
 }
