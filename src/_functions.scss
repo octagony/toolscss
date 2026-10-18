@@ -1,5 +1,6 @@
 @use "sass:list";
 @use "sass:math";
+@use "sass:string";
 @use "variables";
 
 // CONVERT TO REM
@@ -42,4 +43,29 @@
   $random-num: $min + math.floor($rand * (($max - $min) + 1));
 
   @return $random-num;
+}
+
+@function escape-class-name($name) {
+  $replacements: (
+    "/": "\\/",
+    ":": "\\:",
+    ".": "\\.",
+    "[": "\\[",
+    "]": "\\]",
+  );
+
+  @each $search, $replace in $replacements {
+    $result: "";
+    $remaining: $name;
+
+    @while string.index($remaining, $search) != null {
+      $index: string.index($remaining, $search);
+      $result: $result + string.slice($remaining, 1, $index - 1) + $replace;
+      $remaining: string.slice($remaining, $index + string.length($search));
+    }
+
+    $name: $result + $remaining;
+  }
+
+  @return $name;
 }

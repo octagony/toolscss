@@ -2,22 +2,22 @@
   "name": "@octagony/toolscss",
   "version": "0.0.150",
   "description": "Simple CSS library",
+  "keywords": [
+    "css",
+    "library",
+    "scss"
+  ],
+  "license": "ISC",
+  "author": "octagony",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "stylelint": "stylelint 'src/**/*.scss'"
   },
-  "keywords": [
-    "scss",
-    "css",
-    "library"
-  ],
-  "author": "octagony",
-  "license": "ISC",
   "devDependencies": {
     "cssnano": "^7.0.6",
     "postcss": "^8.5.1",
-    "saas": "^1.0.0",
+    "sass": "^1.105.2",
     "stylelint": "^16.14.1",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",

@@ -1,6 +1,7 @@
 @use "functions";
 
 $spacing: (
+  "0": functions.rem-calc(0),
   "2": functions.rem-calc(2),
   "4": functions.rem-calc(4),
   "6": functions.rem-calc(6),
