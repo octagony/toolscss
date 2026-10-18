@@ -1,0 +1,94 @@
+@use "@/functions";
+
+$heights: (
+  "0": functions.rem-calc(0),
+  "1": functions.rem-calc(4),
+  "2": functions.rem-calc(8),
+  "3": functions.rem-calc(12),
+  "4": functions.rem-calc(16),
+  "5": functions.rem-calc(20),
+  "6": functions.rem-calc(24),
+  "8": functions.rem-calc(32),
+  "10": functions.rem-calc(40),
+  "12": functions.rem-calc(48),
+  "16": functions.rem-calc(64),
+  "20": functions.rem-calc(80),
+  "24": functions.rem-calc(96),
+  "32": functions.rem-calc(128),
+  "40": functions.rem-calc(160),
+  "48": functions.rem-calc(192),
+  "56": functions.rem-calc(224),
+  "64": functions.rem-calc(256),
+  "80": functions.rem-calc(320),
+  "96": functions.rem-calc(384),
+);
+
+$fractional-heights: (
+  "1/2": 50%,
+  "1/3": 33.333333%,
+  "2/3": 66.666667%,
+  "1/4": 25%,
+  "2/4": 50%,
+  "3/4": 75%,
+  "1/5": 20%,
+  "2/5": 40%,
+  "3/5": 60%,
+  "4/5": 80%,
+);
+
+$utils-heights: (
+  "full": 100%,
+  "screen": 100vh,
+  "svh": 100svh,
+  "lvh": 100lvh,
+  "dvh": 100dvh,
+  "auto": auto,
+  "none": none,
+  "min": min-content,
+  "max": max-content,
+  "fit": fit-content
+);
+
+@each $key, $value in $heights {
+  .h-#{$key} {
+    height: $value;
+  }
+
+  .min-h-#{$key} {
+    min-height: $value;
+  }
+
+  .max-h-#{$key} {
+    max-height: $value;
+  }
+}
+
+@each $key, $value in $fractional-heights {
+  $escaped-key: functions.escape-class-name($key);
+
+  .h-#{$escaped-key} {
+    height: $value;
+  }
+
+  .min-h-#{$escaped-key} {
+    min-height: $value;
+  }
+
+  .max-h-#{$escaped-key} {
+    max-height: $value;
+  }
+}
+
+@each $key, $value in $utils-heights {
+  .h-#{$key} {
+    height: $value;
+  }
+
+  .min-h-#{$key} {
+    min-height: $value;
+  }
+
+  .max-h-#{$key} {
+    max-height: $value;
+  }
+}
