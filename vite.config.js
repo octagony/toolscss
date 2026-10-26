@@ -6,7 +6,7 @@ import stylelintPlugin from "vite-plugin-stylelint";
 export default defineConfig({
   root: "./src",
   build: {
-    outDir: "../dist",
+    outDir: "dist",
     rollupOptions: {
       input: path.resolve(__dirname, "src/index.scss"),
       output: {
@@ -22,6 +22,7 @@ export default defineConfig({
     },
   },
   css: {
+    devSourcemap: true,
     postcss: {
       plugins: [cssnano({ preset: "default" })],
     },
@@ -33,4 +34,7 @@ export default defineConfig({
       exclude: ["node_modules"],
     }),
   ],
+  server: {
+    port: 3000,
+  },
 });
