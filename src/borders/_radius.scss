@@ -1,0 +1,60 @@
+@use "@/functions";
+
+$radius: (
+  "none": 0,
+  "1": functions.rem-calc(4),
+  "2": functions.rem-calc(8),
+  "3": functions.rem-calc(12),
+  "4": functions.rem-calc(16),
+  "5": functions.rem-calc(20),
+  "6": functions.rem-calc(24),
+  "8": functions.rem-calc(32),
+  "10": functions.rem-calc(40),
+  "12": functions.rem-calc(48),
+  "16": functions.rem-calc(64),
+  "20": functions.rem-calc(80),
+  "24": functions.rem-calc(96),
+  "full": 9999px,
+);
+
+@each $key, $value in $radius {
+  .rounded-#{$key} {
+    border-radius: $value;
+  }
+
+  .rounded-t-#{$key} {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  }
+
+  .rounded-r-#{$key} {
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+
+  .rounded-b-#{$key} {
+    border-bottom-right-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+
+  .rounded-l-#{$key} {
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+
+  .rounded-tl-#{$key} {
+    border-top-left-radius: $value;
+  }
+
+  .rounded-tr-#{$key} {
+    border-top-right-radius: $value;
+  }
+
+  .rounded-bl-#{$key} {
+    border-bottom-left-radius: $value;
+  }
+
+  .rounded-br-#{$key} {
+    border-bottom-right-radius: $value;
+  }
+}
