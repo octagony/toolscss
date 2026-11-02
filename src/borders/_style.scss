@@ -1,0 +1,18 @@
+$border-styles: (
+  "solid": solid,
+  "dashed": dashed,
+  "dotted": dotted,
+  "double": double,
+  "hidden": hidden,
+  "none": none,
+);
+
+@each $key, $value in $border-styles {
+  .border-#{$key} {
+    border-style: $value;
+  }
+
+  .divide-#{$key}> :not(:last-child) {
+    border-style: $value;
+  }
+}
