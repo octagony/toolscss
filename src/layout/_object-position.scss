@@ -7,7 +7,7 @@ $object-position-values: (
   right: "right",
   right-bottom: "right bottom",
   right-top: "right top",
-  top: top,
+  top: "top",
 );
 
 @each $key, $value in $object-position-values {
