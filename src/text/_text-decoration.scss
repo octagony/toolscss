@@ -1,0 +1,20 @@
+$text-decoration-values: (
+  underline,
+  overline,
+  line-through,
+  no-underline
+);
+
+@each $value in $text-decoration-values {
+  @if $value==no-underline {
+    .#{$value} {
+      text-decoration: none;
+    }
+  }
+
+  @else {
+    .#{$value} {
+      text-decoration: $value;
+    }
+  }
+}
