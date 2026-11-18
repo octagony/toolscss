@@ -1,0 +1,20 @@
+$text-transform-values: (
+  uppercase,
+  lowercase,
+  capitalize,
+  normal-case
+);
+
+@each $value in $text-transform-values {
+  @if $value==normal-case {
+    .#{$value} {
+      text-transform: none;
+    }
+  }
+
+  @else {
+    .#{$value} {
+      text-transform: $value;
+    }
+  }
+}
