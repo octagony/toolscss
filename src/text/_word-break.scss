@@ -1,0 +1,25 @@
+$word-break-values: (
+  normal,
+  words,
+  all,
+  keep
+);
+
+@each $value in $word-break-values {
+  .break-#{$value} {
+    @if $value ==words {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    @else if $value ==keep {
+      word-break: keep-all;
+      overflow-wrap: normal;
+    }
+
+    @else {
+      word-break: $value;
+      overflow-wrap: normal;
+    }
+  }
+}

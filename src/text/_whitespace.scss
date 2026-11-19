@@ -1,0 +1,14 @@
+$whitespace-values: (
+  normal,
+  nowrap,
+  pre,
+  pre-line,
+  pre-wrap,
+  break-spaces
+);
+
+@each $value in $whitespace-values {
+  .whitespace-#{$value} {
+    white-space: $value;
+  }
+}
