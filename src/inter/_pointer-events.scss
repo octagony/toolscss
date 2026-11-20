@@ -1,0 +1,10 @@
+$pointer-events-values: (
+  none,
+  auto
+);
+
+@each $value in $pointer-events-values {
+  .pointer-events-#{$value} {
+    pointer-events: $value;
+  }
+}
