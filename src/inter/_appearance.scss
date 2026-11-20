@@ -1,0 +1,10 @@
+$appearance-values: (
+  none,
+  auto
+);
+
+@each $value in $appearance-values {
+  .appearance-#{$value} {
+    appearance: $value;
+  }
+}
