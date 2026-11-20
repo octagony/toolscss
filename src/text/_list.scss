@@ -1,0 +1,22 @@
+$list-type-values: (
+  none,
+  disc,
+  decimal
+);
+
+@each $value in $list-type-values {
+  .list-#{$value} {
+    list-style-type: $value;
+  }
+}
+
+$list-position-values: (
+  inside,
+  outside
+);
+
+@each $value in $list-position-values {
+  .list-#{$value} {
+    list-style-position: $value;
+  }
+}
