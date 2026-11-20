@@ -1,0 +1,12 @@
+$user-select-values: (
+  none,
+  text,
+  all,
+  auto
+);
+
+@each $value in $user-select-values {
+  .select-#{$value} {
+    user-select: $value;
+  }
+}
