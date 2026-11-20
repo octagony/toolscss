@@ -1,0 +1,23 @@
+$cursor-values: (
+  auto,
+  default,
+  pointer,
+  wait,
+  text,
+  move,
+  not-allowed,
+  progress,
+  help,
+  crosshair,
+  grab,
+  grabbing,
+  zoom-in,
+  zoom-out,
+  none,
+);
+
+@each $value in $cursor-values {
+  .cursor-#{$value} {
+    cursor: $value;
+  }
+}
