@@ -1,0 +1,12 @@
+$resize-values: (
+  none,
+  y,
+  x,
+  both
+);
+
+@each $value in $resize-values {
+  .resize-#{$value} {
+    resize: $value;
+  }
+}
