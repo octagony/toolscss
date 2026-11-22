@@ -1,0 +1,11 @@
+$background-attachment-values: (
+  fixed,
+  local,
+  scroll
+);
+
+@each $value in $background-attachment-values {
+  .bg-#{$value} {
+    background-attachment: $value;
+  }
+}
