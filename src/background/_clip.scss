@@ -1,0 +1,16 @@
+$background-clip-values: (
+  border: border-box,
+  padding: padding-box,
+  content: content-box,
+  text: text,
+);
+
+@each $key, $value in $background-clip-values {
+  .bg-clip-#{$key} {
+    @if $key ==text {
+      -webkit-background-clip: text; // для старых Safari
+    }
+
+    background-clip: $value;
+  }
+}
