@@ -1,0 +1,34 @@
+@use "sass:list";
+
+$blend-modes: (
+  normal,
+  multiply,
+  screen,
+  overlay,
+  darken,
+  lighten,
+  color-dodge,
+  color-burn,
+  hard-light,
+  soft-light,
+  difference,
+  exclusion,
+  hue,
+  saturation,
+  color,
+  luminosity
+);
+
+$mix-blend-modes: list.append($blend-modes, plus-lighter);
+
+@each $value in $mix-blend-modes {
+  .mix-blend-#{$value} {
+    mix-blend-mode: $value;
+  }
+}
+
+@each $value in $blend-modes {
+  .bg-blend-#{$value} {
+    background-blend-mode: $value;
+  }
+}
