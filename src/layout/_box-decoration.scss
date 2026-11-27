@@ -1,7 +1,22 @@
-$box-decoration-values: (clone, slice);
+$box-sizing-values: (
+  border: border-box,
+  content: content-box,
+);
+
+@each $key, $value in $box-sizing-values {
+  .box-#{$key} {
+    box-sizing: $value;
+  }
+}
+
+$box-decoration-values: (
+  slice,
+  clone
+);
 
 @each $value in $box-decoration-values {
   .box-decoration-#{$value} {
-    box-direction: $value;
+    -webkit-box-decoration-break: $value;
+    box-decoration-break: $value;
   }
 }
