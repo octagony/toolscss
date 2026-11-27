@@ -1,0 +1,18 @@
+$touch-action-values: (
+  auto,
+  none,
+  pan-x,
+  pan-y,
+  pan-left,
+  pan-right,
+  pan-up,
+  pan-down,
+  manipulation,
+  pinch-zoom
+);
+
+@each $value in $touch-action-values {
+  .touch-#{$value} {
+    touch-action: $value;
+  }
+}

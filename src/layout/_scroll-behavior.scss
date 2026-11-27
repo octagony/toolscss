@@ -1,0 +1,10 @@
+$scroll-behavior-values: (
+  auto,
+  smooth
+);
+
+@each $value in $scroll-behavior-values {
+  .scroll-#{$value} {
+    scroll-behavior: $value;
+  }
+}

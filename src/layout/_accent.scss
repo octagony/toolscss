@@ -1,0 +1,20 @@
+@use "@/colors" as colors;
+
+$accent-keywords: (
+  auto: auto,
+  current: currentcolor,
+  inherit: inherit,
+  transparent: transparent,
+);
+
+@each $key, $value in $accent-keywords {
+  .accent-#{$key} {
+    accent-color: $value;
+  }
+}
+
+@each $key, $value in colors.$colors {
+  .accent-#{$key} {
+    accent-color: $value;
+  }
+}

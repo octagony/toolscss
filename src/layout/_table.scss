@@ -1,0 +1,21 @@
+$border-collapse-values: (
+  collapse,
+  separate
+);
+
+@each $value in $border-collapse-values {
+  .border-#{$value} {
+    border-collapse: $value;
+  }
+}
+
+$table-layout-values: (
+  auto,
+  fixed
+);
+
+@each $value in $table-layout-values {
+  .table-#{$value} {
+    table-layout: $value;
+  }
+}
